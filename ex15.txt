@@ -1,0 +1,11 @@
+-- first we have created a module MyDNAStuff where I have defined some function to reverse the sequence, calculating the GC count, to find complement and reverse complement of the input sequence.
+
+-- now we have created another module (codon_table.py) to translate our input DNA seq into amino acid sequence.
+
+-- Functions which are defined in these modules are already described in previous assignment submission.
+
+-- In the codon_table module we can also get the amino acid which are left after the translation ( extra 1 or 2 amino acid) as #. Code for this action is commented in the module.
+
+-- finally we are getting six frames translation amino acid sequences. 3 for frame 1,2,3 in forward direction and 3 for frame -1,-2,-3 in reverse complement. 
+
+-- All garbage characters (any character except ATGC) are handled in the program.

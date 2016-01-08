@@ -1,0 +1,10 @@
+-- imporing Model module where connection is established and relationship between Taxonomy and Name table is defined by Foreign Key and tables joined by Multiple join on tax_id column.
+
+
+-- giving organism name as command line argument
+
+-- getting all values from Name table for this organism.
+
+-- now using the foreignkey constraint which we have defined in the Model.py we are getting values from taxonomy table for the tax_id which is common between both tables (Foreign key)
+
+-- printing the scientific name.

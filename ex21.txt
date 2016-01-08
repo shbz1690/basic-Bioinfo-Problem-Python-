@@ -1,0 +1,15 @@
+-- importing sys, sqlite3 module.
+
+-- giving organism name from command line argument.
+
+-- connecting to taxa database.
+
+-- giving parameter as our organism name and name_class should be scientific name.
+
+-- executing the query.
+
+-- in query we are joining name and taxonomy table on the tax_id column bcz it is common in both.
+
+-- and by this we can get scientific name from taxonomy table by giving input the organism name which is in the name table. 
+
+-- printing the row.

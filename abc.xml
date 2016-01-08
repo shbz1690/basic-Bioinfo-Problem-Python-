@@ -1,0 +1,48 @@
+<uniprot created="2010-12-20">
+	<entry dataset="abc">
+		<reference id="1">
+			<title>first references</title>
+			<author>
+				<person name="Mr. A"/>
+				<person name="Mr. B"/>
+				<person name="Mr. C"/>
+			</author>
+			<scope> scope 1 for id 1 </scope>
+			<scope> scope 2 for id 1 </scope>
+			<scope> scope 2 for id 1 </scope>
+		</reference>
+		<reference id="2">
+			<title>Second references</title>
+			<author>
+				<person name="Mr. D"/>
+				<person name="Mr. E"/>
+				<person name="Mr. F"/>
+			</author>
+			<scope> scope 1 for id 2 </scope>
+			<scope> scope 2 for id 2 </scope>
+			<scope> scope 3 for id 2 </scope>
+		</reference>
+		<reference id="3">
+			<title>third references</title>
+			<author>
+				<person name="Mr. G"/>
+				<person name="Mr. H"/>
+				<person name="Mr. I"/>
+			</author>
+			<scope> scope 1 for id 3 </scope>
+			<scope> scope 2 for id 3 </scope>
+			<scope> scope 3 for id 3 </scope>
+		</reference>
+		<reference id="4">
+			<title>fourth references</title>
+			<author>
+				<person name="Mr. J"/>
+				<person name="Mr. K"/>
+				<person name="Mr. L"/>
+			</author>
+			<scope> scope 1 for id 4 </scope>
+			<scope> scope 2 for id 4 </scope>
+			<scope> scope 3 for id 4 </scope>
+		</reference>
+	</entry>
+</uniprot>

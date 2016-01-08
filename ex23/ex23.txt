@@ -1,0 +1,20 @@
+-- both ex22 and ex23 are included in this example.
+
+-- importing the model module where we have established the connection to our database and defined the Taxonomy and Name tables and relationship between them.
+
+-- taking organism name as command line input.
+
+-- now using the foreignkey constraint which we have defined in the model.py we are getting values from taxonomy table for the taxonomy_id of the given organism (id in taxonomy table and taxonomy_id in name table) which is common between both tables (Foreign key)
+
+
+-- now running a while loop to find full taxonomic lineage for the tax_id. Loop will run untill we will find out the root.
+
+-- storing the scientific name of all parents in a list.
+-- printing the scientific name for the organism.
+-- printing the list in the reverse order to get the taxonomy in parent->child format.
+
+
+-- eg: organism name= man
+
+
+

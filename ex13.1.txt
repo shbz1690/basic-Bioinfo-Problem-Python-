@@ -1,0 +1,15 @@
+# getting reference from a Uniprot xml file.
+
+-- opening the xml file using the urllib module and parsing it into document using ElementTree module.
+
+-- now getting the roor of our xml file using getroot()
+
+-- using namespace
+
+--we want Title of reference , author, citation detail and these all are under citation tag.
+
+-- so we will look into this tag.
+
+-- we will access all the values for person tag (name attribute) inside the Citation tag 
+
+-- in the citation tag the first tag is title so we will print first the Reference number, Title, attribute for citation, and values from the author list because for each reference we have multiple Author names so we created List. And we have created it inside the for loop so that for each reference it will take new values.

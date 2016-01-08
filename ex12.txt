@@ -1,0 +1,23 @@
+--find pairs of lysine residues that might be linked if the BS3 cross-linker is used.
+
+-- importing Bio.PDB.PDBParser module so that we can parse the pdb files
+
+-- accessing A chain and B chain using the structure.
+
+-- In the A chain first we are looking only for Lysine residues and if it is water molecule then we will continue looking for Lysine.
+
+--looking for the residue in A chain and in the nested loop looking for the residue in B chain
+
+--computing the distance between residues (C alpha atom) and it should be between 10 to 12 because BS3 linker have residue at approx distance of 11A. 
+
+-- There is another way we can solve this problem using the neighbor search method. because this method is not good for large scale, here we are looking for all pairs of residues.
+
+-- In this method we build a data structure with atoms in it and we can ask our choice of data from it ( for eg: give me the atoms at a distance < 6.0 or greater than 6.0)
+
+-- in this we build a list of all the C alpha atoms in chain B using List Comprehensions syntax.
+
+--Neighborsearch build a data structure and store in neighbor. We pass the list of c alpha atoms from chain B into this method and create a data structure.
+
+-- we look for every  C alpha residue of chain A and then ask from the data structure to give the residues which are close to c alpha of chain a by a specific distance.
+
+-- both program will not return anything if the distance will not be in the provided range.

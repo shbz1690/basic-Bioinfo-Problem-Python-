@@ -1,0 +1,45 @@
+-- I am giving my input through the command line so here
+-- I am importing the sys module and storing my input codon
+-- into input_codon variable.
+
+import sys
+input_codon=sys.argv[1]
+rev_primer=sys.argv[2]
+
+-- Now I am defining a function to find the complement of my input codon.
+-- I am using "If" statement to get the specific complement according to
+-- my input codon, and if my codon does not contain ATGC, then I am   
+-- returning the same nucleotide as complement
+
+def comp(nuc):
+    if nuc=='A':
+        comp='T'
+    elif nuc=='T':
+        comp='A'
+    elif nuc=='G':
+        comp='C'
+    elif nuc=='C':
+        comp='G'
+    else:
+        comp=nuc
+    return comp
+
+-- now I am defining a function to get the reverse complement.
+-- first of all I am changing input codon in uppercase.
+-- then I am defining a variable rev_comp as null and I am going to store
+-- my result into this variable.  Now i am using "for" loop to run  
+-- complement function for each nucleotide one by one. and then we
+-- will add the complement of nucleotide in reverse order and return
+-- the value.
+
+def rev_comp(nucl):
+    nucl=nucl.upper()
+    rev_comp=''
+    for i in nucl:
+        compl=comp(i)
+        rev_comp = compl+rev_comp
+    return rev_comp
+
+-- calling the rev_comp function.
+
+print "reverse complement is:",rev_comp(input_codon)

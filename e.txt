@@ -1,0 +1,5 @@
+/* pgm to count frequency of aa for all enrty (not a specific entry) in RefSeq and SwissProt database files */
+
+the steps are same as in exc11.py program but here after calculating the frequency for each enrty we clear the dictionary so that for next enrty we can count the frequency for them.
+
+In this pgm we will not enter any specific entry for RefSeq and SwissProt entry, we will only take file names from commandline argument.

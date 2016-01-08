@@ -1,0 +1,19 @@
+# tandem repeat in integer number
+
+-- importing sys module and using command line argument.
+
+import sys
+seq= sys.argv[1]
+
+-- counting the length of sequence
+
+l=len(seq)
+
+-- storing the first nucleotide of input sequence into first_nuc variable.
+
+first_nuc=seq[0]
+
+-- Now I am dividing the total length of sequence by the total number of first nucleotide
+-- if the remainder is 0 then DNA sequence consists integer number of perfect tandem repeats.
+ 
+print "DNA sequence consists of an integer number of perfect tandem repeats : ",l%(seq.count(first_nuc))==0

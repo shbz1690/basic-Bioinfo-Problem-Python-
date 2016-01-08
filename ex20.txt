@@ -1,0 +1,31 @@
+-- first uncompressed the .gz files and formatted it for Blast.
+
+-- import NCBIXML module to read the xml files.
+
+-- creating four list for evalue, title of blast hit, our query seq, score. These list will store all results so that at the end we can find most conserved seq.
+
+-- now parsing our xml file.
+
+-- creating two list , one for evalue and one for title. we will use this two list to find the best hit for each fruit fly ribosomal protein and after loop will finish for 1 fruit fly entry we will clear these lists and again run the loop for next fruit fly protein.
+
+-- appending the e-value which are significant ( < 1e-5 ) and its title into two different lists.
+
+-- if the list will contain any result ( title or evalue) ( len(list) > 0) then we will print our query sequence , title of best hit blast result and it's e-value. The first entry in the list will be the best hit.
+
+-- then we will clear the list and run the loop again.
+
+-- now we want most conserved protein ( best hit among all hits)
+
+-- first we will print the most conserved protein which have least e-value , there can be more than one protein which have e-value 0.0. ( we will get three proteins here)
+
+-- getting the index of minimum e-value from main list (evalue) which we created in starting. for more than 1 e-value it will store the index into the 'indices' list.
+
+-- for each index we will print the query, title of hit, e-value, score. 
+
+-- now we will get the most conserved protein which have the least e-value and maximum score amongst the three proteins which we got in previous step.
+
+-- getting the score value for the all three value and appending in a list. Then finding the index of maximum score.
+
+-- looking for this index in our indices list which have minimum e-value.
+
+-- printing query, best hit, evalue , score for this protein with minimum e-value and max score.

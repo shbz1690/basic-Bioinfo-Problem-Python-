@@ -1,0 +1,13 @@
+-- importing the modules to retrieve enrez id, blast result and to read NCBI Blast result.
+
+-- searching for Id's of LIME gene in Homosapiens species in protein database.
+
+-- now sending these id one by one to run the blast by NCBIWWW.qblast. First checking that the blast result file is already existed on local machine or not.
+
+-- blastp (because) we are running protein query and want protein seq, database is refseq_protein.
+
+-- storing the blast result in xml and storing on our local device.
+
+-- Now parsing the xml file and looking for only those results which belong to 'Mus musculas' organism and having e-value<1e-5
+
+-- printing the title and e-value of for the matched entry

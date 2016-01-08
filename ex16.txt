@@ -1,0 +1,7 @@
+-- In MyDNA.py module we are using try and except to handle the exception
+
+-- if the seq will be empty or null then we are calling the exception which will state that no sequence entered.
+
+-- we have handled the Key error in complement function.
+
+-- we are handling the the error when no ATGC is available in our seq and no initiation codon is available in our seq.

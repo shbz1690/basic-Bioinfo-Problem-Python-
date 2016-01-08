@@ -1,0 +1,26 @@
+/* pgm to find the frequency of amino acid of an entry in RefSeq database file and SwissProt file and comparing the frequencies from both databases */
+
+-- import Bio.SeqIO (to parse the bio files), sys and gzip (to parse zip files) module
+
+-- take filename for RefSeq database file and Swissprot file from command line argument.
+
+-- this code is written to compare the aa frequency of a specific entry in both databases.
+
+-- take the RefSeq number/id from keyboard (user) : XP_011524511.1
+-- take uniprot id from keyboard (for same protein which we have given for refSeq):  Q9C0F0
+
+-- define variables in which we are going to store the frequencies.
+
+-- opening the RefSeq compressed file and by gzip.open and storing in seqfile variable.
+
+-- parsing the fasta file format using Bio.SeqIO.parse and format will be "fasta"
+
+-- splitting the refSeq id/number by '|' , and if our given RefSeq id matches with the id in file then we count the frequency of aa and storing it into a dictionary count.
+
+-- if the next aa is already exists in the dict than we will increment it by 1 otherwise we will assign 1 into its value because it occurred first time.
+
+-- after finishing this we will count the key with maximum and minimum value and print the result.
+
+-- same process will be imlemented on SwissProt file.
+
+-- in the end we will compare the frequency from both the databse and print our result.   

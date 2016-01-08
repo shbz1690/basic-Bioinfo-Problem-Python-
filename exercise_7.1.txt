@@ -1,0 +1,88 @@
+# reverse complement of codon
+
+--we are taking input from command line argument.
+import sys
+input_codon=sys.argv[1]
+
+-- in this program we have used three different function to find the complement of
+-- our input sequence and then we are finding reverse complement by rev_compl function.
+
+-- first function to find complement is complement1.
+-- In this function we are checking our input sequence using IF-else statement.
+-- we are checking that nucleotide in our input sequence is A or T or G or C or else.
+-- according to that we are returning complement. 
+
+def complement1(nuc):
+    if nuc=='A':
+        comp='T'
+    elif nuc=='T':
+        comp='A'
+    elif nuc=='G':
+        comp='C'
+    elif nuc=='C':
+        comp='G'
+    else:
+        comp=nuc
+    return comp
+
+-- Second function to find complement is complement2.
+-- In this function we are comparing input sequence nucleotide with the 
+-- nucleotide assigned in 'nt' variable using Find function. And then finding the complement from 'compl'
+-- variable because we have already assigned complement of 'nt' variable in 'comple' variable.
+ 
+
+def complement2(nuc):
+    nt='ATGC'
+    compl='TACG'
+    i=nt.find(nuc)
+    if i>=0:
+        comp=compl[i]
+    else:
+        comp=nuc
+    return comp
+
+-- third function is same like complement2 function but here we are handling the lowercase and uppercase symbol in
+-- the function.
+
+
+def complement3(nuc):
+    nt='ATGCatgc'
+    compl='TACGtacg'
+    i=nt.find(nuc)
+    if i>=0:
+        comp=compl[i]
+    else:
+        comp=nuc
+    return comp
+
+
+-- rev_compl is function to get the reverse complement of our input sequence.
+-- we have used three variable rev_comp1,rev_comp3,rev_comp3 which will return three 
+-- reverse complement values for our input sequence by using three different functions (complement1,complement2,complement3)
+-- we are using two for loops because in the second for loop we storing nucleotide in 'i' variable without converting it
+-- to upper case letters.
+   
+def rev_comp1(nuc):
+    nucl1=nuc.upper()
+    rev_comp1=''
+    rev_comp2=''
+    rev_comp3=''
+    for i in nucl1:
+        compl1=complement1(i)
+        compl2=complement2(i)
+        rev_comp1 = compl1+rev_comp1
+        rev_comp2 = compl2+rev_comp2
+    for i in nuc:
+        compl=complement3(i)
+        rev_comp3 = compl+rev_comp3
+    return rev_comp1,rev_comp2,rev_comp3
+
+
+rc=rev_comp1(input_codon)
+print "reverse complement of",input_codon," is :",'\n',rc[0],'\n',rc[1],'\n',rc[2]
+
+-- complement2 function is more robust than other because we are using for loop instead of IF statement which we
+-- have used in the complement1 function. And we are not checking upper case and lower case letter seprately because
+-- we have already converted all input_seq letters to upper case unlike the complement3 function.
+-- All three functions will return correct result. 
+
